@@ -1,5 +1,5 @@
 import { getUserById } from "../model"
-import { BadRequest } from "http-errors"
+import { BadRequest, NotFound } from "http-errors"
 
 export const handle404 = (req, _res, next) => {
     const { method, path } = req
@@ -12,7 +12,7 @@ export const handle500 = ({ status = 500, name, message }, _req, res, next) => {
     res.status(status).json({ name, statusCode: status, message })
 }
 
-export const validateUserId = async (req, res, next) => {
+export const validateUserId = async (req, _res, next) => {
     const { userId } = req.params
 
     try {
@@ -24,4 +24,12 @@ export const validateUserId = async (req, res, next) => {
         console.log(error)
         next(error)
     }
+}
+
+export const validateUser = (req, _res, next) => {
+    const { name } = req.body
+
+    if (!name) return next(BadRequest("Missing user data"))
+
+    next()
 }
