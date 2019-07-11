@@ -7,7 +7,7 @@ export const getUserById = id =>
         .where({ id: Number(id) })
         .first()
 
-export const insertUsers = user =>
+export const insertUser = user =>
     db("users")
         .insert(user)
         .then(ids => ({ id: ids[0] }))

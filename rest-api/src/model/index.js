@@ -8,7 +8,7 @@ import {
 import {
     getUsers,
     getUserById,
-    insertUsers,
+    insertUser,
     updateUser,
     removeUser,
     getUserPosts
@@ -22,7 +22,7 @@ export {
     removePost,
     getUsers,
     getUserById,
-    insertUsers,
+    insertUser,
     updateUser,
     removeUser,
     getUserPosts
