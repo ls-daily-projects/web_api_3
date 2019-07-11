@@ -2,12 +2,12 @@ import db from "../data"
 
 export const getUsers = () => db("users")
 
-export const getUsersById = id =>
+export const getUserById = id =>
     db("users")
         .where({ id: Number(id) })
         .first()
 
-export const insertUsers = user =>
+export const insertUser = user =>
     db("users")
         .insert(user)
         .then(ids => ({ id: ids[0] }))

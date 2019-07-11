@@ -1,14 +1,14 @@
 import {
     getPosts,
-    getPostsById,
+    getPostById,
     insertPost,
     updatePost,
     removePost
 } from "./post"
 import {
     getUsers,
-    getUsersById,
-    insertUsers,
+    getUserById,
+    insertUser,
     updateUser,
     removeUser,
     getUserPosts
@@ -16,13 +16,13 @@ import {
 
 export {
     getPosts,
-    getPostsById,
+    getPostById,
     insertPost,
     updatePost,
     removePost,
     getUsers,
-    getUsersById,
-    insertUsers,
+    getUserById,
+    insertUser,
     updateUser,
     removeUser,
     getUserPosts

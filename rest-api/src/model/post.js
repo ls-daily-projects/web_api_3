@@ -2,7 +2,7 @@ import db from "../data"
 
 export const getPosts = () => db("posts")
 
-export const getPostsById = id => db("posts").where({ id: Number(id) })
+export const getPostById = id => db("posts").where({ id: Number(id) })
 
 export const insertPost = post =>
     db("posts")
