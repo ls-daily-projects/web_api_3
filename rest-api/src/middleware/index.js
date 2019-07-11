@@ -33,3 +33,11 @@ export const validateUser = (req, _res, next) => {
 
     next()
 }
+
+export const validatePost = (req, res, next) => {
+    const { text } = req.body
+
+    if (!text) return next(BadRequest("Missing required text field"))
+
+    next()
+}
